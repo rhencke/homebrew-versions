@@ -83,14 +83,13 @@ class Gcc5 < Formula
       # Everything but Ada, which requires a pre-existing GCC Ada compiler
       # (gnat) to bootstrap. GCC 4.6.0 add go as a language option, but it is
       # currently only compilable on Linux.
-      languages = %w[c c++ fortran java go objc obj-c++]
+      languages = %w[c c++ fortran java objc obj-c++]
     else
       # C, C++, ObjC compilers are always built
       languages = %w[c c++ objc obj-c++]
 
       languages << "fortran" if build.with? "fortran"
       languages << "java" if build.with? "java"
-      languages << "go" if build.with? "go"
       languages << "jit" if build.with? "jit"
     end
 
