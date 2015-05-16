@@ -33,9 +33,10 @@ class Gcc5 < Formula
     sha256 "5cc7eaaab1dd29879109ccf896f91c691ba6267a997288ee526e3f21479a8f02" => :mountain_lion
   end
 
+  # GCC's Go compiler is not currently supported on Mac OS X.
+  # See: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=46986
   option "with-fortran", "Build the gfortran compiler"
   option "with-java", "Build the gcj compiler"
-  option "with-go", "Build the gccgo compiler"
   option "with-all-languages", "Enable all compilers and languages, except Ada"
   option "with-nls", "Build with native language support (localization)"
   option "with-profiled-build", "Make use of profile guided optimization when bootstrapping GCC"
